@@ -1,0 +1,3 @@
+Django
+kafka-python
+confluent-kafka==2.9.0
