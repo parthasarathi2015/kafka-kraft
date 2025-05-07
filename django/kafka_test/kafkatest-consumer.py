@@ -5,7 +5,7 @@ from confluent_kafka import Consumer, KafkaException
 KAFKA_BROKER_URL = os.environ.get("KAFKA_BROKER_URL", "kafka-2:9092")
 PROD_TOPIC = os.environ.get("PROD_TOPIC", "user-delete")
 GROUP_ID = os.environ.get("GROUP_ID", "user-delete-group")
-POLL_FREQUENCY = float(os.environ.get("GROUP_ID", 3.0))
+POLL_FREQUENCY = float(os.environ.get("POLL_FREQUENCY", 3.0))
 
 
 def consume_messages():
