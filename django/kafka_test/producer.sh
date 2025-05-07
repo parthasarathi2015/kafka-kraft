@@ -1,1 +1,1 @@
-python3 ./kafkatest-producer.py
+python3 kafkatest-producer.py
