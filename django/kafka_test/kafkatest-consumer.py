@@ -21,6 +21,7 @@ def consume_messages():
         while True:
             msg = consumer.poll(POLL_FREQUENCY)  # Timeout in seconds
             if msg is None:
+                print("No message found ......!")
                 continue
             if msg.error():
                 if msg.error().code() == KafkaException._PARTITION_EOF:
@@ -31,5 +32,11 @@ def consume_messages():
             print(f"Received feed back message: {msg.value().decode('utf-8')}")
     finally:
         consumer.close()
+
+
+if __name__ == "__main__":
+   print("Consumer started....")
+   consume_messages()
+
 
 
